@@ -26,6 +26,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "carousel_pro",
+      "rootUri": "file:///home/joao/Development/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_pro-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "charcode",
       "rootUri": "file:///home/joao/Development/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.2",
       "packageUri": "lib/",
@@ -200,7 +206,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-02-09T21:10:25.401282Z",
+  "generated": "2020-02-10T13:55:39.179281Z",
   "generator": "pub",
   "generatorVersion": "2.8.0-dev.7.0.flutter-c8ed304e97"
 }
