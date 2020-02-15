@@ -1,5 +1,6 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:globo_now/components/background_container.dart';
 import 'package:globo_now/components/generic_navbar_page.dart';
 import 'package:globo_now/components/standard_flash.dart';
@@ -13,6 +14,10 @@ class Flashes extends StatelessWidget {
     Map<String, dynamic> themeColors = CurrentTheme().getThemeColors();
     MediaQueryData mediaQuery = MediaQuery.of(context);
     return GenericNavbar(
+      leftNavbarIcon: FontAwesomeIcons.angleLeft,
+      leftIconCallback: () {
+        Navigator.pop(context);
+      },
       child: Center(
         child: Container(
           width: mediaQuery.size.width * 0.8,

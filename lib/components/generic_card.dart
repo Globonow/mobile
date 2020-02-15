@@ -9,6 +9,7 @@ class GenericCard extends StatelessWidget {
   final String imageURI;
   final String bigText;
   final String smallText;
+  final Function onPressed;
 
   GenericCard(
       {@required this.height,
@@ -16,42 +17,47 @@ class GenericCard extends StatelessWidget {
       this.isLive = false,
       @required this.imageURI,
       this.bigText,
-      this.smallText});
+      this.smallText,
+      this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     Map<String, dynamic> themeColors = CurrentTheme().getThemeColors();
-    return Container(
-      child: Stack(
-        alignment: this.isLive ? Alignment.bottomLeft : Alignment.bottomCenter,
-        children: <Widget>[
-          Container(
-            height: this.height,
-            width: this.width,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(40),
-              image: DecorationImage(
-                  image: NetworkImage(this.imageURI), fit: BoxFit.cover),
-            ),
-            foregroundDecoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(40),
-              gradient: LinearGradient(colors: <Color>[
-                Colors.transparent,
-                themeColors['background']['bot']
-              ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
-            ),
-          ),
-          Padding(
-            padding:
-                const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 12.0),
-            child: RichText(
-              text: TextSpan(
-                text: '',
-                children: this.getCardText(themeColors),
+    return GestureDetector(
+      onTap: this.onPressed,
+      child: Container(
+        child: Stack(
+          alignment:
+              this.isLive ? Alignment.bottomLeft : Alignment.bottomCenter,
+          children: <Widget>[
+            Container(
+              height: this.height,
+              width: this.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(40),
+                image: DecorationImage(
+                    image: NetworkImage(this.imageURI), fit: BoxFit.cover),
+              ),
+              foregroundDecoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(40),
+                gradient: LinearGradient(colors: <Color>[
+                  Colors.transparent,
+                  themeColors['background']['bot']
+                ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
               ),
             ),
-          ),
-        ],
+            Padding(
+              padding:
+                  const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 12.0),
+              child: RichText(
+                text: TextSpan(
+                  text: '',
+                  children: this.getCardText(themeColors),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

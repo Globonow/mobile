@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:globo_now/components/generic_navbar_page.dart';
 import 'package:globo_now/components/standard_button.dart';
+import 'package:globo_now/screens/chat.dart';
 import 'package:globo_now/utilities/themes.dart';
 
 const programs = [
@@ -48,6 +49,9 @@ class CommunityDashboard extends StatelessWidget {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     return GenericNavbar(
       leftNavbarIcon: FontAwesomeIcons.angleLeft,
+      leftIconCallback: () {
+        Navigator.pop(context);
+      },
       rightNavbarIcon: FontAwesomeIcons.userAlt,
       child: Column(
         children: <Widget>[
@@ -100,7 +104,9 @@ class CommunityDashboard extends StatelessWidget {
                     height: 40,
                     width: 200,
                     text: 'PARTICIPAR NO CHAT',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, Chat.routeId);
+                    },
                   )
                 ],
               ),
@@ -108,9 +114,60 @@ class CommunityDashboard extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              color: Colors.blue,
               height: 350,
               width: 400,
+              child: ListView.builder(
+                itemCount: programs.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Container(
+                    height: mediaQuery.size.height * 0.17,
+                    width: mediaQuery.size.width,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: <Color>[
+                          themeColors['background']['top'],
+                          themeColors['background']['bot']
+                        ],
+                      ),
+                    ),
+                    child: Stack(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            'ENTRETENIMENTO',
+                            style: TextStyle(
+                                letterSpacing: 3,
+                                color: Colors.white,
+                                fontFamily: 'Roboto',
+                                fontSize: 15),
+                          ),
+                        ),
+                        ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: programs.length,
+                            itemBuilder: (context, index) {
+                              return Container(
+                                margin: EdgeInsets.only(
+                                    top: 30, bottom: 5, left: 20),
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: NetworkImage(
+                                        programs[index]['img_url']),
+                                  ),
+                                ),
+                              );
+                            }),
+                      ],
+                    ),
+                  );
+                },
+              ),
             ),
           ),
         ],

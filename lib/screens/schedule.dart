@@ -48,6 +48,9 @@ class Schedule extends StatelessWidget {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     return GenericNavbar(
       leftNavbarIcon: FontAwesomeIcons.angleLeft,
+      leftIconCallback: () {
+        Navigator.pop(context);
+      },
       rightNavbarIcon: FontAwesomeIcons.userAlt,
       child: Column(
         children: <Widget>[

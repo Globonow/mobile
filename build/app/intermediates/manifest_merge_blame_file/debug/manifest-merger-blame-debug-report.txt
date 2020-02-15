@@ -30,7 +30,7 @@
 25        android:debuggable="true"
 26        android:icon="@mipmap/ic_launcher"
 26-->/home/joao/AndroidStudioProjects/globo_now/android/app/src/main/AndroidManifest.xml:11:9-43
-27        android:label="globo_now" >
+27        android:label="Globo Now" >
 27-->/home/joao/AndroidStudioProjects/globo_now/android/app/src/main/AndroidManifest.xml:10:9-34
 28        <activity
 28-->/home/joao/AndroidStudioProjects/globo_now/android/app/src/main/AndroidManifest.xml:12:9-40:20

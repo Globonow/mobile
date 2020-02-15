@@ -21,7 +21,7 @@ class Navbar extends StatelessWidget {
     Map<String, dynamic> themeColors = CurrentTheme().getThemeColors();
 
     return Container(
-      height: mediaQuery.size.height * 0.15,
+      height: mediaQuery.size.height * 0.12,
       color: themeColors['header'],
       child: Padding(
         padding: const EdgeInsets.only(bottom: 8, left: 8, right: 8),
@@ -42,7 +42,7 @@ class Navbar extends StatelessWidget {
             SizedBox(
                 child: Image(
               image: AssetImage('assets/images/globonow-logo.png'),
-              height: 35,
+              height: 39,
             )),
             Padding(
               padding: const EdgeInsets.all(8.0),

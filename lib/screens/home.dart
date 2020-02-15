@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:globo_now/components/generic_navbar_page.dart';
 import 'package:globo_now/components/generic_card.dart';
+import 'package:globo_now/screens/community_dashboard.dart';
+import 'package:globo_now/screens/flashes.dart';
+import 'package:globo_now/screens/schedule.dart';
 import 'package:globo_now/screens/splash.dart';
 
 class Home extends StatelessWidget {
@@ -12,24 +15,16 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     return GenericNavbar(
-      drawer: Container(
-        width: mediaQuery.size.width * 0.7,
-        height: mediaQuery.size.height,
-        color: Colors.lightGreen,
-        child: MaterialButton(
-          onPressed: () {
-            Navigator.pushNamed(context, Splash.routeId);
-          },
-        ),
-      ),
-      leftNavbarIcon: FontAwesomeIcons.bars,
-      rightNavbarIcon: FontAwesomeIcons.userAlt,
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             GenericCard(
+              onPressed: () {
+                Navigator.pushNamed(context, Flashes.routeId);
+              },
               height: 280,
               width: 350,
               isLive: true,
@@ -45,6 +40,9 @@ class Home extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     child: GenericCard(
+                      onPressed: () {
+                        Navigator.pushNamed(context, Schedule.routeId);
+                      },
                       height: 170,
                       width: 160,
                       smallText: 'Programação',
@@ -54,6 +52,10 @@ class Home extends StatelessWidget {
                   ),
                   Container(
                     child: GenericCard(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, CommunityDashboard.routeId);
+                      },
                       height: 170,
                       width: 160,
                       smallText: 'Comunidade',
