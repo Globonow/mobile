@@ -1,16 +1,20 @@
-# globo_now
 
-.
+GloboNow Mobile
+=============
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+> Este aplicativo foi parte do projeto desenvolvido durante o **1º Shawee Mega Hack** cujo tive a felicidade de participar junto de mais quatro ótimos desenvolvedores!
 
-A few resources to get you started if this is your first Flutter project:
+> Fiquei responsável pela aplicação mobile, e aqui você pode encontrar o código desenvolvido por mim durante a duração do evento!
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+> Outras informações como nosso pitch e maiores informações em breve!
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![](https://i.ibb.co/2YRY9x3/Whats-App-Image-2020-02-18-at-09-47-42.jpg)
+![](https://i.ibb.co/3zfGgdK/Whats-App-Image-2020-02-18-at-09-47-42-1.jpg)
+![](https://i.ibb.co/T4f81h1/Whats-App-Image-2020-02-18-at-09-47-40.jpg)
+![](https://i.ibb.co/Ct84QMm/Whats-App-Image-2020-02-18-at-09-47-41-3.jpg)
+![](https://i.ibb.co/p2Wc8CC/Whats-App-Image-2020-02-18-at-09-47-41-2.jpg)
+![](https://i.ibb.co/K6rnDYm/Globo-Now-pptx-4.png)
+![](https://i.ibb.co/nc7YszF/Globo-Now-pptx-3.png)
+![](https://i.ibb.co/Xy6cgYc/Logo.png)
+![](https://i.ibb.co/XZC40rS/Whats-App-Image-2020-02-18-at-09-47-41.jpg)
