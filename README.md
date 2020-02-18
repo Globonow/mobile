@@ -9,7 +9,7 @@ GloboNow Mobile
 
 > Outras informações como nosso pitch e maiores informações em breve!
 
-![](https://i.ibb.co/2YRY9x3/Whats-App-Image-2020-02-18-at-09-47-42.jpg)
+![](https://ibb.co/dJXJTF4)
 ![](https://i.ibb.co/3zfGgdK/Whats-App-Image-2020-02-18-at-09-47-42-1.jpg)
 ![](https://i.ibb.co/T4f81h1/Whats-App-Image-2020-02-18-at-09-47-40.jpg)
 ![](https://i.ibb.co/Ct84QMm/Whats-App-Image-2020-02-18-at-09-47-41-3.jpg)
